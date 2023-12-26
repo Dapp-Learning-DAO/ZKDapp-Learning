@@ -4,24 +4,20 @@
 请完成习题： https://0xparc.notion.site/Prerequisite-understanding-questions-c5ebb77a5cc049f39577ec9a7fb7b22c  
 
 ## snark 入门文章
-vitalik: https://vitalik.ca/general/2017/11/09/starks_part_1.html
-vitalik: https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649  
-
-
-安比实验室入门系列： https://mp.weixin.qq.com/s/V5C7-kwdHRrEVGJjINJ3hQ
-
-
-  https://vitalik.ca/general/2017/02/01/zk_snarks.html
+- vitalik: https://vitalik.ca/general/2017/11/09/starks_part_1.html
+- vitalik: https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649  
+- 安比实验室入门系列： https://mp.weixin.qq.com/s/V5C7-kwdHRrEVGJjINJ3hQ
+- https://vitalik.ca/general/2017/02/01/zk_snarks.html
 
 
 ## zkEVM
-介绍： https://hackmd.io/@yezhang/S1_KMMbGt
-zkevm架构：https://mp.weixin.qq.com/s/q-BmJfsRIqTa2zL93Rq0eg
-Scroll Tech： https://hackmd.io/@yezhang/S1sJ2cEWY
-0x parc: https://0xparc.org/blog/zk-learning-group
-https://blog.goodaudience.com/understanding-zero-knowledge-proofs-through-simple-examples-df673f796d99  
-zkclub: https://www.youtube.com/playlist?list=PLj80z0cJm8QHm_9BdZ1BqcGbgE-BEn-3Y
-zkevm-specification: https://ethresear.ch/t/a-zk-evm-specification/11549
+- 介绍： https://hackmd.io/@yezhang/S1_KMMbGt
+- zkevm架构：https://mp.weixin.qq.com/s/q-BmJfsRIqTa2zL93Rq0eg
+- Scroll Tech： https://hackmd.io/@yezhang/S1sJ2cEWY
+- 0x parc: https://0xparc.org/blog/zk-learning-group
+- https://blog.goodaudience.com/understanding-zero-knowledge-proofs-through-simple-examples-df673f796d99  
+- zkclub: https://www.youtube.com/playlist?list=PLj80z0cJm8QHm_9BdZ1BqcGbgE-BEn-3Y
+- zkevm-specification: https://ethresear.ch/t/a-zk-evm-specification/11549
 
 ## 参考链接
 - zk workshop: https://www.zkhack.dev/  
