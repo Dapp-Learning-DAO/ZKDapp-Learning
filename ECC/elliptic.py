@@ -251,14 +251,16 @@ class EllipticCurve:
         if q.iszero():
             return p
 
-        # calculate the slope of the intersection line
-        if p == q:
+        # calculate the slope of the intersection line 
+        # k=[(3x1^2+a)/2y1]mod p
+        if p == q:   
             if p.y == 0:
                 return self.zero()
             l = (3 * p.x ** 2 + self.a) / (2 * p.y)
         elif p.x == q.x:
             return self.zero()
         else:
+            # 若P≠Q，则k=(y2-y1)/(x2-x1) mod p
             l = (p.y - q.y) / (p.x - q.x)
 
         # calculate the intersection point
@@ -502,8 +504,22 @@ def test_curve():
     assert Gx.y == 0x5A79D6B289610C68BC3B47F3D72F9788A26A06868B4D8E433E1E2AD76FB7DC76
     print("test_curve() passed")
 
+def test_ECC(): 
+    dsa = secp256k1()
+    p  = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEFFFFFC2F
+    n = 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFEBAAEDCE6AF48A03BBFD25E8CD0364141
+    assert dsa.G.x ** 3 + 7 ==  dsa.GFn.value((dsa.G.y**2))
+    p1 =dsa.GFn.value(p)
+    n2 = 2 ** 256 - 432420386565659656852420866394968145599
+    print("n1 = ", n2)
+    n1 =dsa.GFn.value(n)
+    print("p1 = ", p1)
+
+    #Quick verify if(Gx, Gy) is on secp256k1 curve:
+    
 
 if __name__ == "__main__":
     test_ff()
+    test_ECC()
     test_curve()
     test_dsa()

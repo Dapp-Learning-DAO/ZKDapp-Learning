@@ -1,15 +1,4 @@
-# 以太坊签名函数实操
-
-> 函数式编程是有别于传统的面对对象范式的编程范式，函数式方向是目前编程语言发展的大方向，所有新设计的编程语言都或多或少的引入了函数式编程功能。
-
-
-
-前文索引：
-
-> [理解以太坊合约数据读取过程 | 函数式与区块链（二）](http://mp.weixin.qq.com/s?__biz=MzI0NTM0MzE5Mw==&mid=2247485420&idx=1&sn=1149067c6a0bfb13bde552bb5721eefd&chksm=e94eb15ade39384c9e68e2bd6bf321640b5da57eefc828ff92b24669fe6e4aa93468464f74e3&scene=21#wechat_redirect)
->
-
-本篇描述  Rust 两种函数式编程语言下 ECDSA 算法下使用 Secp256k1 签名的过程。
+本篇描述 Rust 两种函数式编程语言下 ECDSA 算法下使用 Secp256k1 签名的过程。
 
 本文侧重相关库的使用，相关原理解析可见：
 
@@ -20,7 +9,6 @@
 > 一场椭圆曲线的寻根问祖之旅：
 >
 > https://fisco-bcos-documentation.readthedocs.io/zh_CN/dev/docs/articles/3_features/36_cryptographic/elliptic_curve.html
-
 
 在 Rust 中，使用了`secp256k1`库与`bitcoin_hashes`库：
 
@@ -38,7 +26,6 @@ bitcoin_hashes = "0.9"
 ## 未压缩的签名
 
 未压缩的签名即是简单粗暴的直接用私钥（privkey）给信息（message）进行签名，签名字节数可能是 71、72 或 73。
-
 
 ### Rust 中的实现
 
@@ -91,7 +78,6 @@ fn do_verify<C: Verification>(secp: &Secp256k1<C>, digest: &[u8], sig: Vec<u8>, 
 > —— https://learnblockchain.cn/books/geth/part3/sign-and-valid.html
 
 压缩签名的长度是 r 和 s 各是 32 字节，v 是 1 字节，总共是 65 字节。
-
 
 ### Rust 中的实现
 
