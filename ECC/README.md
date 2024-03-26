@@ -26,8 +26,8 @@ ECC 的主要优势是它相比 RSA 加密算法使用较小的密钥长度并�
 
 首先定义椭圆曲线方程，我们需要的是在曲线上的点的集合 (the set of points described by the equation)
 
-<!-- $y^2 = x^3 + ax + b$ -->
-<img src="https://render.githubusercontent.com/render/math?math=y^2 = x^3 %2B ax %2B b" />
+$y^2 = x^3 + ax + b$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=y^2 = x^3 %2B ax %2B b" /> -->
 
 ![Different shapes for different elliptic curves ](https://andrea.corbellini.name/images/curves.png)
 
@@ -41,8 +41,11 @@ Types of singularities: 左边是带奇点的曲线，右边是自相交的曲�
 
 最终曲线定义如下
 
-<!-- $\left\{ (x, y) \in \mathbb{R}^2\ |\ y^2 = x^3 + ax + b,\ 4 a^3 + 27 b^2 \ne 0 \right\}\ \cup\ \left\{ 0 \right\}$ -->
-<img src="https://render.githubusercontent.com/render/math?math=\left\{ (x, y) \in \mathbb{R}^2\ |\ y^2 = x^3 %2B ax %2B b,\ 4 a^3 %2B 27 b^2 \ne 0 \right\}\ \cup\ \left\{ 0 \right\}" />
+$$
+\{ (x, y) \in \mathbb{R}^2\ |\ y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0 \} \cup \{ 0 \}
+$$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=\left\{ (x, y) \in \mathbb{R}^2\ |\ y^2 = x^3 %2B ax %2B b,\ 4 a^3 %2B 27 b^2 \ne 0 \right\}\ \cup\ \left\{ 0 \right\}" /> -->
+
 
 ## The group law for elliptic curves
 
@@ -102,56 +105,56 @@ Q=(xQ, yQ)
 
 首先考虑 xP != xQ 的情况，直线的斜率 m 为
 
-<!-- $m = \frac{y_P - y_Q}{x_P - x_Q}$ -->
-<img src="https://render.githubusercontent.com/render/math?math=m = \frac{y_P - y_Q}{x_P - x_Q}" />
+$m = \frac{y_P - y_Q}{x_P - x_Q}$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=m = \frac{y_P - y_Q}{x_P - x_Q}" /> -->
 
 R 的坐标可以如下计算
 
-<!-- $x_R= m^2 - x_P - x_Q$ -->
-<img src="https://render.githubusercontent.com/render/math?math=x_R= m^2 - x_P - x_Q" />
+$x_R= m^2 - x_P - x_Q$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=x_R= m^2 - x_P - x_Q" /> -->
 
-<!-- $y_R= y_P + m(x_R - x_P)$ -->
-<img src="https://render.githubusercontent.com/render/math?math=y_R= y_P %2B m(x_R - x_P)" />
+$y_R= y_P + m(x_R - x_P)$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=y_R= y_P %2B m(x_R - x_P)" /> -->
 
 或者
 
-<!-- $y_Q= y_P + m(x_R - x_Q)$ -->
-<img src="https://render.githubusercontent.com/render/math?math=y_R= y_Q %2B m(x_R - x_Q)" />
+$y_Q= y_P + m(x_R - x_Q)$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=y_R= y_Q %2B m(x_R - x_Q)" /> -->
 
 推导过程如下(感谢 kaiji 的补充)：
 
 代入 Q 点和 P 点到椭圆曲线
 
-<!-- $y_Q^2=x_Q^3+ax_Q+b$ -->
-<img src="https://render.githubusercontent.com/render/math?math=y_Q^2=x_Q^3%2Bax_Q%2Bb" />
+$y_Q^2=x_Q^3+ax_Q+b$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=y_Q^2=x_Q^3%2Bax_Q%2Bb" /> -->
 
-<!-- $y_R^2=x_R^3+ax_R+b$ -->
-<img src="https://render.githubusercontent.com/render/math?math=y_R^2=x_R^3%2Bax_R%2Bb" />
+$y_R^2=x_R^3+ax_R+b$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=y_R^2=x_R^3%2Bax_R%2Bb" /> -->
 
 将上述两个等式相减
 
-<!-- $(y_Q+y_R)(y_Q-y_R)=(x_Q-x_R)(x_Q^2+x_Qx_R+x_R^2+a)$ -->
-<img src="https://render.githubusercontent.com/render/math?math=(y_Q%2By_R)(y_Q-y_R)=(x_Q-x_R)(x_Q^2%2Bx_Qx_R%2Bx_R^2%2Ba)" />
+$(y_Q+y_R)(y_Q-y_R)=(x_Q-x_R)(x_Q^2+x_Qx_R+x_R^2+a)$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=(y_Q%2By_R)(y_Q-y_R)=(x_Q-x_R)(x_Q^2%2Bx_Qx_R%2Bx_R^2%2Ba)" /> -->
 
 将 yQ - yR 替换为 m(xQ-xR),等式两边消去 (yQ+yR)
 
-<!-- $m(y_Q+y_R)=x_Q^2+x_Qx_R+x_R^2+a$ -->
-<img src="https://render.githubusercontent.com/render/math?math=m(y_Q%2By_R)=x_Q^2%2Bx_Qx_R%2Bx_R^2%2Ba" />
+$m(y_Q+y_R)=x_Q^2+x_Qx_R+x_R^2+a$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=m(y_Q%2By_R)=x_Q^2%2Bx_Qx_R%2Bx_R^2%2Ba" /> -->
 
 同理可得
 
-<!-- $m(y_P+y_R)=x_P^2+x_Px_R+x_R^2+a$ -->
-<img src="https://render.githubusercontent.com/render/math?math=m(y_P%2By_R)=x_P^2%2Bx_Px_R%2Bx_R^2%2Ba" />
+$m(y_P+y_R)=x_P^2+x_Px_R+x_R^2+a$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=m(y_P%2By_R)=x_P^2%2Bx_Px_R%2Bx_R^2%2Ba" /> -->
 
 将上述两个等式相减
 
-<!-- $m(y_P-y_Q)=(x_P+x_Q)(x_P-x_Q)+x_R(x_P-x_Q)$ -->
-<img src="https://render.githubusercontent.com/render/math?math=m(y_P-y_Q)=(x_P%2Bx_Q)(x_P-x_Q)%2Bx_R(x_P-x_Q)" />
+$m(y_P-y_Q)=(x_P+x_Q)(x_P-x_Q)+x_R(x_P-x_Q)$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=m(y_P-y_Q)=(x_P%2Bx_Q)(x_P-x_Q)%2Bx_R(x_P-x_Q)" /> -->
 
 两边同时除以 (xP-xQ)
 
-<!-- $x_R=m^2-x_P-x_Q$ -->
-<img src="https://render.githubusercontent.com/render/math?math=x_R=m^2-x_P-x_Q" />
+$x_R=m^2-x_P-x_Q$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=x_R=m^2-x_P-x_Q" /> -->
 
 计算出 R 点之后，进而得出关于 x 轴对称点 -R，即为 P+Q 的结果
 
@@ -166,13 +169,13 @@ R 的坐标可以如下计算
 
 我们先将椭圆曲线方程改成 y 的一次方形式
 
-<!-- $y_P = \pm \sqrt{x_P^3 + ax_P + b}$ -->
-<img src="https://render.githubusercontent.com/render/math?math=y_P = \pm \sqrt{x_P^3 %2B ax_P %2B b}" />
+$y_P = \pm \sqrt{x_P^3 + ax_P + b}$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=y_P = \pm \sqrt{x_P^3 %2B ax_P %2B b}" /> -->
 
 当 P，Q 横坐标相同，直线为椭圆曲线的切线，我们将更改斜率 m 的定义为椭圆曲线的导函数
 
-<!-- $m = \frac{3 x_P^2 + a}{2 y_P}$ -->
-<img src="https://render.githubusercontent.com/render/math?math=m=\frac{3 x_P^2 %2B a}{2 y_P}" />
+$m = \frac{3 x_P^2 + a}{2 y_P}$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=m=\frac{3 x_P^2 %2B a}{2 y_P}" /> -->
 
 xR 和 yR 的公式保持不变，我们将 P=Q=(1,2) 代入公式验证
 
@@ -188,8 +191,8 @@ nP=P+P+...+P (n times)
 
 **double and add algorithm** 用一个例子解释该算法工作原理：假设 n=151,其二进制表示为 10010111
 
-<!-- $151= 1 \cdot 2^7 + 0 \cdot 2^6 + 0 \cdot 2^5 + 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0$ -->
-<img src="https://render.githubusercontent.com/render/math?math=151= 1 \cdot 2^7 %2B 0 \cdot 2^6 %2B 0 \cdot 2^5 %2B 1 \cdot 2^4 %2B 0 \cdot 2^3 %2B 1 \cdot 2^2 %2B 1 \cdot 2^1 %2B 1 \cdot 2^0" />
+$151= 1 \cdot 2^7 + 0 \cdot 2^6 + 0 \cdot 2^5 + 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=151= 1 \cdot 2^7 %2B 0 \cdot 2^6 %2B 0 \cdot 2^5 %2B 1 \cdot 2^4 %2B 0 \cdot 2^3 %2B 1 \cdot 2^2 %2B 1 \cdot 2^1 %2B 1 \cdot 2^0" /> -->
 
 double and add algorithm 将要做的是：
 
@@ -321,8 +324,8 @@ def inverse_of(n, p):
 
 对椭圆曲线取模，公式将变成如下形式
 
-<!-- $\{(x, y) \in (\mathbb{F}_p)^2 | y^2 \equiv x^3 + ax + b \pmod{p}, 4a^3 + 27b^2 \ne 0\}\cup\{0\}$ -->
-<img src="https://render.githubusercontent.com/render/math?math=\{(x, y) \in (\mathbb{F}_p)^2 | y^2 \equiv x^3 %2B ax %2B b \pmod{p}, 4a^3 %2B 27b^2 \ne 0\}\cup\{0\}" />
+$\{(x, y) \in (\mathbb{F}_p)^2 | y^2 \equiv x^3 + ax + b \pmod{p}, 4a^3 + 27b^2 \ne 0\}\cup\{0\}$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=\{(x, y) \in (\mathbb{F}_p)^2 | y^2 \equiv x^3 %2B ax %2B b \pmod{p}, 4a^3 %2B 27b^2 \ne 0\}\cup\{0\}" /> -->
 
 0 点仍然是无穷远点，(x, y) 是 Fp 中的整数。
 
@@ -340,8 +343,8 @@ def inverse_of(n, p):
 
 我们之前已经讨论过在椭圆曲线上 P+Q+R=0 的定义，三个点都在实属域 R 中。那么在有限域 Fp 中，将满足以下等式
 
-<!-- $ax + by + c \equiv 0 \pmod{p}$ -->
-<img src="https://render.githubusercontent.com/render/math?math=ax %2B by %2B c \equiv 0 \pmod{p}" />
+$ax + by + c \equiv 0 \pmod{p}$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=ax %2B by %2B c \equiv 0 \pmod{p}" /> -->
 
 ![addition in Fp](https://andrea.corbellini.name/images/point-addition-mod-p.png)
 
@@ -359,26 +362,26 @@ Fp 中的加法属性
 
 直接将实数域的公式增加 mod p
 
-<!-- $x_R= (m^2 - x_P - x_Q) mod p$ -->
-<img src="https://render.githubusercontent.com/render/math?math=x_R= (m^2 - x_P - x_Q) mod p" />
+$x_R= (m^2 - x_P - x_Q) mod p$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=x_R= (m^2 - x_P - x_Q) mod p" /> -->
 
-<!-- $y_R= [y_P + m(x_R - x_P)] mod p$ -->
-<img src="https://render.githubusercontent.com/render/math?math=y_R= [y_P %2B m(x_R - x_P)] mod p" />
+$y_R= [y_P + m(x_R - x_P)] mod p$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=y_R= [y_P %2B m(x_R - x_P)] mod p" /> -->
 
 or
 
-<!-- $y_R= [y_P + m(x_R - x_P)] mod p$ -->
-<img src="https://render.githubusercontent.com/render/math?math=y_R= [y_Q %2B m(x_R - x_Q)] mod p" />
+$y_R= [y_P + m(x_R - x_P)] mod p$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=y_R= [y_Q %2B m(x_R - x_Q)] mod p" /> -->
 
 对于斜率 m，当 xP != xQ
 
-<!-- $m = (y_P - y_Q)*(x_P - x_Q)^{-1} mod p$ -->
-<img src="https://render.githubusercontent.com/render/math?math=m = (y_P - y_Q)*(x_P - x_Q)^{-1} mod p" />
+$m = (y_P - y_Q)*(x_P - x_Q)^{-1} mod p$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=m = (y_P - y_Q)*(x_P - x_Q)^{-1} mod p" /> -->
 
 当 xP = xQ
 
-<!-- $m = (3 x_P^2 + a)(2 y_P)^{-1} \bmod{p}$ -->
-<img src="https://render.githubusercontent.com/render/math?math=m = (3 x_P^2 %2B a)(2 y_P)^{-1} \bmod{p}" />
+$m = (3 x_P^2 + a)(2 y_P)^{-1} \bmod{p}$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=m = (3 x_P^2 %2B a)(2 y_P)^{-1} \bmod{p}" /> -->
 
 ### The order of an elliptic curve group
 
@@ -507,8 +510,8 @@ Alice 和 Bob 想要隐私且安全的交换信息，不被第三方看到内容
 2. Alice 和 Bob 互相交换公钥 HA 和 HB ，第三方可见公钥，但无法知道两人的私钥。
 3. Alice 计算出消息 S = dA\*HB , Bob 也计算出消息 S = dB\*HA， 两人会得到相同的结果
 
-<!-- $S = d_A H_B = d_A (d_B G) = d_B (d_A G) = d_B H_A$ -->
-<img src="https://render.githubusercontent.com/render/math?math=S =d_AH_B=d_A(d_BG)=d_B(d_AG)=d_BH_A" />
+$S = d_A H_B = d_A (d_B G) = d_B (d_A G) = d_B H_A$
+<!-- <img src="https://render.githubusercontent.com/render/math?math=S =d_AH_B=d_A(d_BG)=d_B(d_AG)=d_BH_A" /> -->
 
 原理在于两人用自己的私钥乘以对方的公钥，其结果都是 dA\*dB\*G , 但第三方只知道公钥，就无法得到信息。
 
