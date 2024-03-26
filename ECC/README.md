@@ -41,8 +41,11 @@ Types of singularities: 左边是带奇点的曲线，右边是自相交的曲�
 
 最终曲线定义如下
 
-$\left\{ (x, y) \in \mathbb{R}^2\ |\ y^2 = x^3 + ax + b,\ 4 a^3 + 27 b^2 \ne 0 \right\}\ \cup\ \left\{ 0 \right\}$
+$$
+\{ (x, y) \in \mathbb{R}^2\ |\ y^2 = x^3 + ax + b,\ 4a^3 + 27b^2 \ne 0 \} \cup \{ 0 \}
+$$
 <!-- <img src="https://render.githubusercontent.com/render/math?math=\left\{ (x, y) \in \mathbb{R}^2\ |\ y^2 = x^3 %2B ax %2B b,\ 4 a^3 %2B 27 b^2 \ne 0 \right\}\ \cup\ \left\{ 0 \right\}" /> -->
+
 
 ## The group law for elliptic curves
 
